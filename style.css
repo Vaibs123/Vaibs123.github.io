@@ -1,0 +1,28 @@
+header{
+  height: 100vh;
+  background-image: url(cover1.jpg);
+    background-size: cover;
+    background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#giveborder
+{
+  border: dashed;
+  border-color: black;
+  opacity: 0;
+}
+.land1,.land2,.land3,.land4 {
+    overflow: hidden;
+    position: relative;
+    margin-left: 5%;
+     float: left;
+    width: 10%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+}
