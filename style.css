@@ -1,6 +1,13 @@
+/*div.cover1
+{
+	content:url("Guitar-cover.jpg","Guitar.png");
+	position: relative;
+	height: 500px;
+	width: 100%;;
+}*/
 header{
   height: 100vh;
-  background-image: url(cover1.jpg);
+  background-image: url(cover1212.jpg);
     background-size: cover;
     background-position: center;
 
@@ -9,6 +16,18 @@ header{
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.image1
+{
+   background-image: url(aradhya.png);
+   background-size: 40% 60%;
+   background-repeat: no-repeat;
+
+    background-position: right;
+    margin-right: -100px;
+    width: 100%;
+    height: 100%;
+    
 }
 #giveborder
 {
