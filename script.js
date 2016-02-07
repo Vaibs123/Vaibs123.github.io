@@ -1,62 +1,104 @@
-/*div.cover1
+var pContainerHeight = $('.cover').height();
+
+$(window).scroll(function()
 {
-	content:url("Guitar-cover.jpg","Guitar.png");
-	position: relative;
-	height: 500px;
-	width: 100%;;
-}*/
-.cover{
-  height: 100vh;
-  background-image: url(cover1.jpg);
-  background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    position: relative;
+  var wScroll = $(this).scrollTop();
+  if (wScroll <= pContainerHeight) 
+    {
+      $('.titled_fixed').css
+      ({
+        'transform' : 'translate(0px, '+ wScroll /6 +'px)'
+      });
+  }
+});
 
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;*/
 
-}
-.title_fixed
+/*
+	      
+var pContainerHeight = $('.cover').height();
+
+$(window).scroll(function()
 {
 
-  background-attachment: fixed;
+  var wScroll = $(this).scrollTop();
+
+  if (wScroll <= pContainerHeight) 
+  	{
+
+	    $('.image1').css
+	    ({
+	      'transform' : 'translate(0px, '+ wScroll /6 +'px)'
+	   	});
+	}
+
+   
+	
+
+      if(wScroll > $('.cover').offset().top + ($(window).height() / 1.8)) 
+      {
+            $(".image1").delay(3000);
+            $(".image1").css('visibility','visible');
+      }
+      else
+      {
+        $(".image1").css('visibility','hidden');
+      }
 
 
-}
-.image1
-{
-   background-image: url(aradhya.png);
-   background-size: 40% 60%;
-   background-repeat: no-repeat;
-   background-position: bottom right;
-   visibility: hidden;
- 
 
-    margin-right: 0px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    
-}
+if(wScroll > $('.landing').offset().top - ($(window).height() / 1)) 
+  {
+    $('.landing div').each(function(i)
+    {
+      setTimeout(function()
+      {
+        $('.landing-pics div').eq(i).addClass('is-showing');
 
-#giveborder
-{
-  border: dashed;
-  border-color: black;
-  opacity: 0;
-}
-.land1,.land2,.land3,.land4 {
-    overflow: hidden;
-    position: relative;
-    margin-left: 5%;
-     float: left;
-    width: 10%;
-    height: 100px;
-    background-color: white;
-    border: 1px solid black;
-}
+				 $('#giveborder').fadeIn(30000);
+				
+				jQuery('#giveborder').css('opacity', '1');
+
+         
+      }, 
+      (700 * (Math.exp(i * 0.14))) - 700);
+    });
+
+  }
+	
+  // Landing Elements
+  if(wScroll > $('.landing').offset().top - ($(window).height() / 2.7)) 
+  {
+    $('.landing div').each(function(i)
+    {
+      setTimeout(function()
+      {
+        $('.landing-pics div').eq(i).addClass('is-showing');
+         $('.land1').animate(
+			 	{	
+					width:'80%',
+		    		height: 'inherit'
+    			},1000);
+         $('.land2').animate(
+			 	{	
+					width:'80%',
+		    		height: 'inherit'
+    			},1000);
+          $('.land3').animate(
+			 	{	
+					width:'80%',
+		    		height: 'inherit'
+    			},1000);
+         $('.land4').animate(
+			 	{	
+					width:'80%',
+		    		height: 'inherit'
+    			},1000);
+
+      }, 
+      (700 * (Math.exp(i * 0.14))) - 700);
+    });
+
+  }
+	
+				
+});*/
