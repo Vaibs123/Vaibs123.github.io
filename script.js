@@ -1,68 +1,62 @@
-$(window).scroll(function()
+/*div.cover1
 {
-	var wScroll =$(this).scrollTop();
-	console.log(wScroll);
-	$('.cover1').css
-	(
-	{
+	content:url("Guitar-cover.jpg","Guitar.png");
+	position: relative;
+	height: 500px;
+	width: 100%;;
+}*/
+.cover{
+  height: 100vh;
+  background-image: url(cover1.jpg);
+  background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
 
-		'transform' : 'translate(0px, '+ wScroll /4 +'%)'
-	}
-	);
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;*/
 
-if(wScroll > $('.landing').offset().top - ($(window).height() / 1)) 
-  {
-    $('.landing div').each(function(i)
-    {
-      setTimeout(function()
-      {
-        $('.landing-pics div').eq(i).addClass('is-showing');
+}
+.title_fixed
+{
 
-				 $('#giveborder').fadeIn(30000);
-				
-				jQuery('#giveborder').css('opacity', '0.6');
+  background-attachment: fixed;
 
-         
-      }, 
-      (700 * (Math.exp(i * 0.14))) - 700);
-    });
 
-  }
-	
-  // Landing Elements
-  if(wScroll > $('.landing').offset().top - ($(window).height() / 2.7)) 
-  {
-    $('.landing div').each(function(i)
-    {
-      setTimeout(function()
-      {
-        $('.landing-pics div').eq(i).addClass('is-showing');
-         $('.land1').animate(
-			 	{	
-					width:'80%',
-		    		height: 'inherit'
-    			},1000);
-         $('.land2').animate(
-			 	{	
-					width:'80%',
-		    		height: 'inherit'
-    			},1000);
-          $('.land3').animate(
-			 	{	
-					width:'80%',
-		    		height: 'inherit'
-    			},1000);
-         $('.land4').animate(
-			 	{	
-					width:'80%',
-		    		height: 'inherit'
-    			},1000);
+}
+.image1
+{
+   background-image: url(aradhya.png);
+   background-size: 40% 60%;
+   background-repeat: no-repeat;
+   background-position: bottom right;
+   visibility: hidden;
+ 
 
-      }, 
-      (700 * (Math.exp(i * 0.14))) - 700);
-    });
+    margin-right: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
 
-  }
-	
-				
-});
+#giveborder
+{
+  border: dashed;
+  border-color: black;
+  opacity: 0;
+}
+.land1,.land2,.land3,.land4 {
+    overflow: hidden;
+    position: relative;
+    margin-left: 5%;
+     float: left;
+    width: 10%;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+}
