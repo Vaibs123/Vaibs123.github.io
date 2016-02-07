@@ -5,29 +5,45 @@
 	height: 500px;
 	width: 100%;;
 }*/
-header{
+.cover{
   height: 100vh;
-  background-image: url(cover1212.jpg);
+  background-image: url(cover1.jpg);
+  background-attachment: fixed;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
+    position: relative;
 
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center;*/
+
+}
+.title_fixed
+{
+
+  background-attachment: fixed;
+
+
 }
 .image1
 {
    background-image: url(aradhya.png);
    background-size: 40% 60%;
    background-repeat: no-repeat;
+   background-position: bottom right;
+   visibility: hidden;
+ 
 
-    background-position: right;
-    margin-right: -100px;
+    margin-right: 0px;
     width: 100%;
     height: 100%;
-    }
+    position: absolute;
+    
+}
+
 #giveborder
 {
   border: dashed;
