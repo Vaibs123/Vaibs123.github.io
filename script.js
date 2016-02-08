@@ -13,7 +13,7 @@ $(window).scroll(function()
 });
 
 
-/*
+
 	      
 var pContainerHeight = $('.cover').height();
 
@@ -44,7 +44,7 @@ $(window).scroll(function()
         $(".image1").css('visibility','hidden');
       }
 
-
+/*
 
 if(wScroll > $('.landing').offset().top - ($(window).height() / 1)) 
   {
