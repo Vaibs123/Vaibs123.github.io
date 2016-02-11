@@ -1,19 +1,24 @@
+
+
 var pContainerHeight = $('.cover').height();
 
-$(window).scroll(function()
-{
+$(window).scroll(function(){
+
   var wScroll = $(this).scrollTop();
-  if (wScroll <= pContainerHeight) 
-    {
-      $('.titled_fixed').css
-      ({
-        'transform' : 'translate(0px, '+ wScroll /6 +'px)'
+
+  if (wScroll <= pContainerHeight) {
+
+    $('.title_fixed').css({
+        'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
       });
+
+    
+
   }
 });
 
 
-
+/*
 	      
 var pContainerHeight = $('.cover').height();
 
@@ -44,7 +49,7 @@ $(window).scroll(function()
         $(".image1").css('visibility','hidden');
       }
 
-/*
+
 
 if(wScroll > $('.landing').offset().top - ($(window).height() / 1)) 
   {
