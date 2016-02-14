@@ -8,14 +8,15 @@ $(window).scroll(function(){
 
   if (wScroll <= pContainerHeight) {
 
-    $('.title_fixed').css({
-        'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
+    $('.title_text').css({
+        'transform' : 'translate(0px, '+ wScroll /4 +'%)'
       });
 
     
 
   }
 });
+
 
 
 /*
